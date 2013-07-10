@@ -4,8 +4,8 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   var string2read = fs.readFileSync('/home/ubuntu/bitstarter/bitstarter/index.html');
-  var buf = new Buffer(string2read.length);
-  buf = string2read;
+  var buf = new Buffer(string2read);
+  buf.toString('utf8',0, buf.length);
   response.send('buf');
 });
 
