@@ -3,7 +3,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  var string2read = fs.readFileSync(index.html);
+  var string2read = fs.readFileSync('/home/ubuntu/bitstarter/bitstarter');
   var buf = new Buffer(string2read.length);
   buf = string2read;
   response.send('buf');
